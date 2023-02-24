@@ -1,0 +1,218 @@
+{
+	"info": {
+		"_postman_id": "171552a9-8877-4d63-b31a-418c369c17f2",
+		"name": "SOYT_VANBAN_KEKHAIGIA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4022654"
+	},
+	"item": [
+		{
+			"name": "auth/authenticate",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"syt\",\n    \"password\": \"syt@tphcm\"\n}"
+				},
+				"url": {
+					"raw": "https://tracuu_service.medinet.org.vn/vi-dashboard-api-1.0/auth/authenticate",
+					"protocol": "https",
+					"host": [
+						"tracuu_service",
+						"medinet",
+						"org",
+						"vn"
+					],
+					"path": [
+						"vi-dashboard-api-1.0",
+						"auth",
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "auth/authenticate-refresh",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0..Yh-v_SvebnjFj5prAgzRDA.qBzvAqns2eBSLyckV9mrz1z_XX5mj-9a7R8e0DLQhNjxclJONrkF0synTXMMD030ROWx3ul6ftWI1SdEBPiJmg.x4jqU_V9xmRXxStk6R3sPA",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://tracuu_service.medinet.org.vn/vi-dashboard-api-1.0/auth/authenticate-refresh",
+					"protocol": "https",
+					"host": [
+						"tracuu_service",
+						"medinet",
+						"org",
+						"vn"
+					],
+					"path": [
+						"vi-dashboard-api-1.0",
+						"auth",
+						"authenticate-refresh"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/idoc/search/all",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0..BG5dgCxt-KpqNsk9A33-CA.22_taqysu6X7N9BmyJc6aBwzV6G_rXqPJmFl7b1k8fa6gXSSy3CtthnRPKQh13v0xnTKZhW7EgqVABiRskNR4w.7C30rcO0IVvdZafweYJMxA"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"tuNgay\": \"01/08/2019\",\n    \"denNgay\": \"10/08/2019\",    \n    \"pageSize\": 100,\n    \"pageNum\": 1,\n    \"keyword\": \"\",  \n    \"type\": \"I\" \n}"
+				},
+				"url": {
+					"raw": "https://tracuu_service.medinet.org.vn/vi-dashboard-api-1.0/api/idoc/search/all",
+					"protocol": "https",
+					"host": [
+						"tracuu_service",
+						"medinet",
+						"org",
+						"vn"
+					],
+					"path": [
+						"vi-dashboard-api-1.0",
+						"api",
+						"idoc",
+						"search",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/idoc/details",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0..BG5dgCxt-KpqNsk9A33-CA.22_taqysu6X7N9BmyJc6aBwzV6G_rXqPJmFl7b1k8fa6gXSSy3CtthnRPKQh13v0xnTKZhW7EgqVABiRskNR4w.7C30rcO0IVvdZafweYJMxA"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"vanBanId\": 31408,\n    \"type\": \"I\"\n}"
+				},
+				"url": {
+					"raw": "https://tracuu_service.medinet.org.vn/vi-dashboard-api-1.0/api/idoc/details",
+					"protocol": "https",
+					"host": [
+						"tracuu_service",
+						"medinet",
+						"org",
+						"vn"
+					],
+					"path": [
+						"vi-dashboard-api-1.0",
+						"api",
+						"idoc",
+						"details"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/idoc/files/base64/3366",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0..BG5dgCxt-KpqNsk9A33-CA.22_taqysu6X7N9BmyJc6aBwzV6G_rXqPJmFl7b1k8fa6gXSSy3CtthnRPKQh13v0xnTKZhW7EgqVABiRskNR4w.7C30rcO0IVvdZafweYJMxA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "fileId",
+							"value": "3366",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://tracuu_service.medinet.org.vn/vi-dashboard-api-1.0/api/idoc/files/base64/3366",
+					"protocol": "https",
+					"host": [
+						"tracuu_service",
+						"medinet",
+						"org",
+						"vn"
+					],
+					"path": [
+						"vi-dashboard-api-1.0",
+						"api",
+						"idoc",
+						"files",
+						"base64",
+						"3366"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
